@@ -1,0 +1,381 @@
+:root{
+    --font-white:#f5f5f5;
+    --c-black:#212121;
+    --main-bg:linear-gradient(75deg,#111111,#919191) no-repeat;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background:var(--main-bg);
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(252, 252, 252);
+    border-radius: 20px;
+}
+html,body{overflow-x: hidden;}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: var(--main-bg);
+    background-size: 100%;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font-white);
+}
+nav .logo{margin-left: 50px;font-size: 1.5em;margin-top: -20px;}
+nav .menu{
+    position: absolute;
+    right: 1px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 0;
+    background: var(--c-black);
+    transition: width .3s;
+    overflow: hidden;
+    z-index: 15;
+}
+nav .menu.menuActive{
+    width: 50%;
+}
+nav .menu.menuActive .bx-x{display: block;}
+nav .bx-menu{
+    margin-right: 50px;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+nav .menu .bx-x{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: var(--font-white);
+    font-size: 3em;
+    z-index: 20;
+    display: none;
+}
+nav .menu a{
+    margin: 10px 0;
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--font-white);
+    text-transform: capitalize;
+}
+nav .menu a:hover{
+    letter-spacing: 2px;
+    transition: letter-spacing .3s,scale .2s;
+    scale: 2;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75vh;
+    text-align: center;
+}
+header .top{padding-top: 80px;}
+header .top p{font-size: 25px;color: #f5f5f5;margin-top: 20px;}
+header .top h1{font-size:8.5em;color: #fff;margin-top: -40px;}
+header .bottom{
+    color: var(--font-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .bottom .bx{margin-right: 50px;font-size: 2.5em;cursor:pointer;transition: margin .3s;}
+header .bottom .bx:hover{margin-right: 20px;}
+header .bottom p:hover{letter-spacing: 2px;transition: letter-spacing .2s;}
+header .bottom p{margin-left: 20px;font-size: 30px; cursor: pointer;}
+
+.velos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    height: max-content;
+    padding: 30px 0;
+}
+.velos .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(222, 222, 222);
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+}
+.velos .top .colorBtn{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.velos .top .btnblack{background: black;}
+.velos .top .btnwheat{background: rgb(153, 159, 140);}
+.velos .top .btnwhite{background: white;}
+.velos .bottom img,.image2{margin-top: 50px;width: 90%; margin-left: 5%;}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    min-height: 60vh;
+    margin-top: 50px;
+}
+.about .left{
+    width: 60%;
+    color: var(--font-white);
+    z-index: 10;
+}
+.about .left p{
+    line-height: 30px;
+    font-size: 20px;
+    rotate:5deg;
+}
+.about .right{
+    position: absolute;
+    right: 150px;
+}
+.about .right img{
+    width: 400px;
+}
+
+.faq{
+    display: flex;
+    background: #212121;
+    flex-direction: column;
+    height: max-content;
+    color: var(--font-white);
+    padding: 20px 0;
+}
+.faq h1{
+    font-size: 7rem;
+    margin-left: 30px;
+    padding: -50 0;
+}
+.faq .question{
+    height: 85px;
+    overflow-y: hidden;
+    transition: height .3s;
+}
+.faq .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.faq .top P{
+    margin-left: 20px;
+    font-size: 25px;
+}
+.faq .top .bx{
+    font-size: 2em;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.faq .bottom p{
+    padding: 10px 0;
+    margin-left: 20px;
+    width: 80%;
+    margin-top: -10px;
+    line-height: 30px;
+    font-size: 20px;
+    color: #c1c1c1;
+}
+.faq hr{
+    width: 95%;
+    height: 2px;
+    border-radius: 10px;
+    border: none;
+    background: #919191;
+}
+.faq .question.faqActive{
+    height: 200px;
+    transition: height .3s;
+}
+.monoImg{
+    height: 80vh;
+    width: 100vw;
+    text-align: center;
+}
+.monoImg img{
+    height: 90%;
+    width: 90%;
+    margin-top: 30px;
+    object-fit: cover;
+}
+/* section options  */
+.options{
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,350px);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.options .box{
+    color: #fff;
+    height: max-content;
+}
+.options .box p{
+    width: 90%;
+    font-size: 20px;
+    line-height: 30px;
+}
+.options .box .img{
+    width: 100%;
+    height:200px;
+}
+.options .box img{width: 100%;height: 100%;object-fit: cover;}
+/* section options  */
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: #121212;
+}
+footer .main{
+    display: flex;
+    justify-content: center;
+    min-height: 50vh;
+    padding-bottom: 30px;
+    /* flex-wrap: wrap-reverse; */
+}
+footer .main .left{
+    color: #f1f1f1;
+    height: 100%;
+    width: 60%;
+}
+footer .main .left p:nth-child(1){
+    font-size: 25px;
+    color: rgb(189, 189, 189);
+}
+footer .main .left p{
+    width: 70%;
+    font-size: 18px;
+    line-height: 30px;
+}
+footer .main .left form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+footer .main .left form #email{
+    width: 70%;
+    padding: 0 20px;
+    height: 40px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+}
+footer .main .left form input[type=submit]{
+    height: 45px;
+    width: 150px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+}
+footer .main .right{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    text-transform: capitalize;
+}
+footer .main .right p{
+    text-align: left;
+}
+footer .main .right .social{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+footer .main .right .social .bx{
+    font-size: 2.5em;
+    margin-right: 10px;
+}
+footer .foot{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background: #010101;
+    padding-bottom: 20px;
+}
+footer .foot h1{margin-left: 4%;}
+footer .foot a{margin-top: -20px;;margin-right: 4%;display: flex;align-items: center;cursor: pointer;color: #fff;text-decoration: none;}
+footer .foot a .bxs-heart{color: red; font-size: 20px;padding: 0 5px;}
+footer .foot a .bx-link
+
+
+
+
+@media screen and (max-width:900px){
+    .faq .question.faqActive{
+        height: 250px;
+        transition: height .3s;
+    }
+
+}
+
+@media screen and (max-width:780px) {
+    html,body{overflow-x: hidden;}
+    nav .logo{margin-left: 30px;}
+    nav .menu.menu.menuActive{
+        width: 100vw;
+    }
+    header .bottom .bx{margin-right: 20px;}
+    header .bottom p{font-size: 25px;}
+    header .top h1{font-size:6em;color:#fff;margin-top: -20px;}
+    .about .right{
+        right: 15px;
+    }
+    .about .right img{width: 400px;}
+    .faq .top .bx{
+        margin-top: -50px;
+        margin-left: 10px;
+    }
+    .faq .question.faqActive{
+        height: 320px;
+        transition: height .3s;
+    }
+    footer .main{
+        flex-direction: column-reverse;
+        padding-left: 5%;
+    }
+    footer .main .left{width: 100%;margin-top: 30px;}
+    footer .main .right{width: 100%;}
+}
+
+
+
+@media screen and (max-width:450px){
+        .faq .question.faqActive{
+            height: 460px;
+            transition: height .3s;
+        }
+        footer .foot{
+            flex-direction: column;
+            align-items: center;
+        }
+    
+    }
